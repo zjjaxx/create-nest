@@ -1,0 +1,32 @@
+{
+  "name": "create-nest",
+  "version": "1.0.0",
+  "description": "nest-cli",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "create-nest": "./bin/bundle.js"
+  },
+  "engines": {
+    "node": ">=v18.3.0"
+  },
+  "scripts": {
+    "build": "rolldown -c rolldown.config.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nest",
+    "cli"
+  ],
+  "author": "zjjaxx",
+  "license": "ISC",
+  "devDependencies": {
+    "@changesets/cli": "^2.29.4",
+    "@types/node": "^22.15.19",
+    "rolldown": "1.0.0-beta.9",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.10.1"
+  }
+}
