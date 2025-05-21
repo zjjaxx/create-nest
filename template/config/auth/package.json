@@ -1,0 +1,6 @@
+{
+    "dependencies": {
+        "argon2": "^0.43.0",
+        "@nestjs/jwt": "^11.0.0"
+    }
+}

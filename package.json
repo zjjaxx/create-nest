@@ -5,13 +5,18 @@
   "type": "module",
   "main": "index.js",
   "bin": {
-    "create-nest": "./bin/bundle.js"
+    "create-nest": "./bin/index.js"
   },
+  "files": [
+    "bin",
+    "templates",
+    "package.json"
+  ],
   "engines": {
     "node": ">=v18.3.0"
   },
   "scripts": {
-    "build": "rolldown -c rolldown.config.ts",
+    "build": "tsup",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -22,11 +27,20 @@
   "license": "ISC",
   "devDependencies": {
     "@changesets/cli": "^2.29.4",
+    "@tsconfig/node22": "^22.0.2",
     "@types/node": "^22.15.19",
     "rolldown": "1.0.0-beta.9",
+    "tsup": "^8.5.0",
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@clack/prompts": "^0.10.1"
+    "@clack/prompts": "^0.10.1",
+    "create-nest": "link:",
+    "ejs": "^3.1.10",
+    "gradient-string": "^3.0.0",
+    "picocolors": "^1.1.1"
+  },
+  "pnpm": {
+    "overrides": {}
   }
 }

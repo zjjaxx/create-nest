@@ -1,0 +1,43 @@
+services:
+  redis:
+    image: redis:latest
+    container_name: redis
+    restart: always
+    # networks:
+    #   - sharefly
+    volumes:
+      - redis_volume_data:/data
+    ports:
+      - 6379:6379
+    
+  db:
+    image: mysql:9.3.0
+    restart: always
+    container_name: db
+    networks:
+      - sharefly
+    environment:
+      MYSQL_ROOT_PASSWORD: 263500
+      MYSQL_DATABASE: server
+    ports:
+      - 3306:3306
+  app:
+    build: .
+    restart: always
+    container_name: app
+    networks:
+      - sharefly
+    ports:
+      - 7788:3008
+    depends_on:
+      - redis
+      - db
+
+volumes:
+  redis_volume_data:
+
+networks:
+  sharefly:
+    driver: bridge
+
+  
