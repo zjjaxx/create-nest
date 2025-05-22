@@ -1,6 +1,6 @@
 {
-  "name": "create-nest",
-  "version": "1.0.0",
+  "name": "create-nest-universal",
+  "version": "1.0.2",
   "description": "nest-cli",
   "type": "module",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "files": [
     "bin",
-    "templates",
+    "template",
     "package.json"
   ],
   "engines": {
