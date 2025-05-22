@@ -3,9 +3,9 @@ import { AppModule } from './app.module';
 import { ConfigService } from '@nestjs/config';
 import { WINSTON_MODULE_NEST_PROVIDER } from 'nest-winston';
 import { VersioningType } from '@nestjs/common';
-<%_ for (const module of modules) { _%>
-<%- module.importer _%>;
-<%_ } _%>
+{{#each modules as | module |}}
+{{{module.importer}}};
+{{/each}}
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -18,9 +18,9 @@ async function bootstrap() {
     type: VersioningType.URI,
     defaultVersion: configSevice.get<string>('API_VERSIONS', '1').split(','),
   });
-  <%_ for (const module of modules) { _%>
-  <%- module.initializer _%>;
-  <%_ } _%>
+  {{#each modules as | module |}}
+  {{{module.initializer}}};
+  {{/each}}
   await app.listen(configSevice.get<string>('PORT', '3000'));
 }
 bootstrap();

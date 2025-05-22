@@ -14,12 +14,12 @@ importers:
       create-nest:
         specifier: 'link:'
         version: 'link:'
-      ejs:
-        specifier: ^3.1.10
-        version: 3.1.10
       gradient-string:
         specifier: ^3.0.0
         version: 3.0.0
+      handlebars:
+        specifier: ^4.7.8
+        version: 4.7.8
       picocolors:
         specifier: ^1.1.1
         version: 1.1.1

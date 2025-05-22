@@ -6,7 +6,7 @@ export default defineConfig({
   splitting: false,
   sourcemap: true,
   dts:true,
-  watch:true,
+  watch:false,
   clean: true,
   minify:true,
   shims: true,

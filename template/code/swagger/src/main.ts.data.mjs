@@ -9,8 +9,7 @@ export default function getData({oldData}) {
     .setVersion('1.0')
     .build();
   const documentFactory = () => SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('docs', app, documentFactory)
-  `,
+  SwaggerModule.setup('docs', app, documentFactory)`,
     }
     return {
         ...oldData,

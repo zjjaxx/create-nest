@@ -7,9 +7,10 @@ import { GlobalExceptionModule } from './common/filters/global-exception.module'
 import { TypeormModule } from './database/typeorm/typeorm.module';
 import { ValidatorModule } from './common/validator/validator.module';
 import { NormalizeModule } from './common/normalize/normalize.module';
-<%_ for (const module of modules) { _%>
-<%- module.importer _%>;
-<%_ } _%>
+{{#each modules as | module |}}
+{{{module.importer}}};
+{{/each}}
+
 
 @Module({
   imports: [
@@ -19,9 +20,9 @@ import { NormalizeModule } from './common/normalize/normalize.module';
     TypeormModule,
     ValidatorModule,
     NormalizeModule,
-    <%_ for (const module of modules) { _%>
-    <%- module.moduleName _%>,
-    <%_ } _%>
+    {{#each modules as | module |}}
+    {{module.moduleName}},
+    {{/each}}
   ],
   controllers: [AppController],
   // providers 告诉nest->把下面的class类放到你的DI中进行初始化
