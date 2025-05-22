@@ -13,8 +13,6 @@ The recommended way to start a universal nestjs template
 pnpm create nest-universal@latest
 ```
 
-***@latest 或 @legacy）不可省略，否则 npm 可能会解析到缓存的过时包版本。***
-
 ## 通用模块
 🚀 多环境配置
 
