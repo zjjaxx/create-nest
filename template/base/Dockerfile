@@ -5,4 +5,4 @@ RUN npm i pnpm -g
 RUN pnpm i
 RUN pnpm build
 CMD ["pnpm","start:prod" ]
-EXPOSE 3008
+EXPOSE 3000

@@ -51,7 +51,7 @@ const init = async () => {
   });
 
   if (argv.version) {
-    console.log(`${cliPackageJson.name} v${cliPackageJson.version}`);
+    console.log(`${cliPackageJson.name} is v${cliPackageJson.version}`);
     process.exit(0);
   }
   let targetDir = positionals[0];

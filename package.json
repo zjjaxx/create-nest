@@ -1,11 +1,11 @@
 {
   "name": "create-nest-universal",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "nest-cli",
   "type": "module",
   "main": "index.js",
   "bin": {
-    "create-nest": "./bin/index.js"
+    "create-nest-universal": "./bin/index.js"
   },
   "files": [
     "bin",

@@ -28,7 +28,7 @@ services:
     networks:
       - sharefly
     ports:
-      - 7788:3008
+      - 7788:3000
     depends_on:
       - redis
       - db
