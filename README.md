@@ -10,7 +10,7 @@ The recommended way to start a universal nestjs template
 
 使用 `create-nest-universal`创建nest通用模版
 ```sh
-npm create nest-universal@latest
+pnpm create nest-universal@latest
 ```
 
 ***@latest 或 @legacy）不可省略，否则 npm 可能会解析到缓存的过时包版本。***
