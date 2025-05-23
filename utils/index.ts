@@ -1,17 +1,11 @@
 import {
-  intro,
-  outro,
-  text,
-  confirm,
-  multiselect,
-  select,
   isCancel,
   cancel,
 } from "@clack/prompts";
 import picocolors from "picocolors";
 import * as fs from "node:fs";
 import path from "node:path";
-const { red, green, cyan, yellow } = picocolors;
+const { red } = picocolors;
 
 export async function unwrapPrompt<T>(
   maybeCancelPromise: Promise<T | symbol>

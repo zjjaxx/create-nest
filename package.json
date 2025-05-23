@@ -1,6 +1,6 @@
 {
   "name": "create-nest-universal",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "nest-cli",
   "type": "module",
   "main": "index.js",
@@ -24,7 +24,7 @@
     "cli"
   ],
   "author": "zjjaxx",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@tsconfig/node22": "^22.0.2",
     "@types/node": "^22.15.19",

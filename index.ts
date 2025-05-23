@@ -193,18 +193,18 @@ const init = async () => {
     root,
     () => {},
     (filepath) => {
-      // 检查当前文件路径是否以 .ejs 结尾，如果是则进行 EJS 模板渲染处理
+      // 检查当前文件路径是否以 .handlebars 结尾，如果是则进行 handlebars 模板渲染处理
       if (filepath.endsWith(".handlebars")) {
-        // 以 UTF-8 编码读取 .ejs 模板文件的内容
+        // 以 UTF-8 编码读取 .handlebars 模板文件的内容
         const template = fs.readFileSync(filepath, "utf-8");
-        // 生成渲染后的文件路径，将 .ejs 扩展名移除
+        // 生成渲染后的文件路径，将 .handlebars 扩展名移除
         const dest = filepath.replace(/\.handlebars$/, "");
         const c_template=Handlebars.compile(template);
-        // 使用 ejs 库对模板进行渲染，传入模板内容和对应的数据
+        // 使用 handlebars 库对模板进行渲染，传入模板内容和对应的数据
         const content =c_template( dataStore[dest])
         // 将渲染后的内容写入到生成的文件路径中
         fs.writeFileSync(dest, content);
-        // 删除原始的 .ejs 模板文件
+        // 删除原始的 .handlebars 模板文件
         fs.unlinkSync(filepath);
       }
     }
